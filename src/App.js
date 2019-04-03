@@ -30,17 +30,18 @@ class App extends Component {
     }
   }
 
-    addItem = (event, item) => {
-      event.preventDefault();
-      const newItem ={
-        name: item,
-        id: Date.now(),
-        purchased: false
-      };
-      this.setState({
-        groceries: [newItem, ...this.state.groceries]
-      });
-    }
+  addItem= (event, item) => {
+    event.preventDefault();
+    const newItem = {
+      name: item,
+      id: Date.now(),
+      purchased: false
+    };
+    this.setState({
+      groceries: [newItem, ...this.state.groceries]
+    });
+  }
+  
 
     toggleItem = itemId => {
       this.setState({
